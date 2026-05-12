@@ -726,23 +726,29 @@
 
     .theme-live-link {
       display: inline-flex;
+      align-items: center;
+      justify-content: center;
       width: fit-content;
       font-family: var(--f-display);
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--blue);
+      color: var(--paper);
+      background: var(--blue);
       text-decoration: none;
-      border-bottom: 1px solid rgba(35,92,146,0.35);
-      padding-bottom: 3px;
+      border: 1px solid var(--blue);
+      border-radius: 999px;
+      padding: 11px 18px;
       margin-bottom: 34px;
-      transition: color 0.2s ease, border-color 0.2s ease;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
     }
 
     .theme-live-link:hover {
-      color: var(--red);
+      background: var(--red);
       border-bottom-color: var(--red);
+      border-color: var(--red);
+      transform: translateY(-1px);
     }
 
     .theme-meta { margin: 8px 0 40px; }
@@ -1156,7 +1162,7 @@
 
         <!-- Media: Under the Shade — theme preview -->
         <div class="media-ph wide has-media reveal d1" aria-label="Under the Shade — theme preview">
-          <iframe src="https://www.youtube.com/embed/99xD1l2t4Xc?rel=0" title="Under the Shade theme preview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <video class="media-contain" src="media/sunny-mode-effect.mp4" loop muted playsinline controls preload="metadata"></video>
         </div>
 
         <div class="theme-meta reveal">
@@ -1198,7 +1204,7 @@
 
         <!-- Media: Ripple — theme preview -->
         <div class="media-ph wide has-media reveal d1" aria-label="Ripple — theme preview">
-          <iframe src="https://www.youtube.com/embed/HD8EHynPbhU?rel=0" title="H2O theme preview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <video class="media-contain" src="media/water-ripple-effect.mp4" loop muted playsinline controls preload="metadata"></video>
         </div>
 
         <div class="theme-meta reveal">
@@ -1239,7 +1245,7 @@
     <div class="container">
       <div class="closing-inner">
         <span class="closing-eyebrow reveal">What ties it together</span>
-        <p class="closing-sub reveal d1">Across the page, I focused on one idea:</p>
+        <p class="closing-sub reveal d1">Across the tasks, I focused on one idea:</p>
         <blockquote class="closing-quote reveal d2">
           Make learning feel less like completing a checklist,<br>
           and more like building something worth showing.
